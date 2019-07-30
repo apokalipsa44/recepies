@@ -4,8 +4,9 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+
+//@Data
 @Entity
-@Data
 public class Notes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,4 +17,32 @@ public class Notes {
 
     @Lob
     private String notes;
+
+    public Notes(String notes) {
+        this.notes = notes;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Recepie getRecepie() {
+        return recepie;
+    }
+
+    public void setRecepie(Recepie recepie) {
+        this.recepie = recepie;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
 }

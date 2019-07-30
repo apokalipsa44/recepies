@@ -1,4 +1,7 @@
 package guru.springframework.repositories;
 
-public class RecepieReepo {
+import guru.springframework.domain.Recepie;
+import org.springframework.data.repository.CrudRepository;
+
+public interface RecepieRepo extends CrudRepository<Recepie, Long> {
 }
