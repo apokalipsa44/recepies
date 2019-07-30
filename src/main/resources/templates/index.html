@@ -22,12 +22,12 @@
     <tbody>
     <tr th:each="recepie : ${recepies}">
         <td th:text="${recepie?.id}">1</td>
-        <td th:text="${recepie?.descryption}">Jedzonko</td>
+        <td th:text="${recepie?.description}">Jedzonko</td>
         <td th:text="${recepie?.ingriedients}">carrot</td>
         <td th:text="${recepie?.prepTime}">112</td>
         <td th:text="${recepie?.cookTime}">60</td>
         <td th:text="${recepie?.servings}">4</td>
-        <td th:text="${recepie?.directionsv}">cook this</td>
+        <td th:text="${recepie?.directions}">cook this</td>
 
 
     </tr>

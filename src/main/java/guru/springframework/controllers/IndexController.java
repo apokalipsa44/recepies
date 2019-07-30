@@ -7,6 +7,7 @@ import guru.springframework.domain.UnitOfMeasure;
 import guru.springframework.repositories.CategoryRepo;
 import guru.springframework.repositories.RecepieRepo;
 import guru.springframework.repositories.UnitOfMesureRepo;
+import guru.springframework.services.RecepiesService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,14 +16,10 @@ import java.util.Optional;
 
 @Controller
 public class IndexController {
-    private CategoryRepo categoryRepo;
-    private UnitOfMesureRepo unitOfMesureRepo;
-    private RecepieRepo recepieRepo;
+   private final RecepiesService recepiesService;
 
-    public IndexController(CategoryRepo categoryRepo, UnitOfMesureRepo unitOfMesureRepo, RecepieRepo recepieRepo) {
-        this.categoryRepo = categoryRepo;
-        this.unitOfMesureRepo = unitOfMesureRepo;
-        this.recepieRepo = recepieRepo;
+    public IndexController(RecepiesService recepiesService) {
+        this.recepiesService = recepiesService;
     }
 
     @RequestMapping({"/index", "/"})
@@ -32,7 +29,7 @@ public class IndexController {
 //        System.out.println(categoryFromDb.get().getId()+" "+ categoryFromDb.get().getDescription());
 //        System.out.println(unitOfMesureFromDb.get().getId()+" "+unitOfMesureFromDb.get().getUnitOfMeasure());
 
-        model.addAttribute("recepies", recepieRepo.findAll());
+        model.addAttribute("recepies", recepiesService.getRecepies());
 
         return "index";
     }
