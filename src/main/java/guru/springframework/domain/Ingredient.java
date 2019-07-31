@@ -25,11 +25,10 @@ public class Ingredient {
     public Ingredient() {
     }
 
-    public Ingredient(String description, BigDecimal amount, UnitOfMeasure unitOFMeasure, Recepie recepie) {
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure unitOFMeasure) {
         this.description = description;
         this.amount = amount;
         this.unitOFMeasure = unitOFMeasure;
-        this.recepie = recepie;
     }
 
     public String getDescription() {

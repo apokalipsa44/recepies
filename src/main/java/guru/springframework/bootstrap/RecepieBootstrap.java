@@ -73,11 +73,11 @@ public class RecepieBootstrap implements ApplicationListener<ContextRefreshedEve
         guacamoleRecepie.getCategories().add(veganCategory);
         guacamoleRecepie.getCategories().add(mexicanCategory);
         // set ingredients
-        guacamoleRecepie.getIngredients().add(new Ingredient("avocados", new BigDecimal(2), unitRipe, guacamoleRecepie));
-        guacamoleRecepie.getIngredients().add(new Ingredient("Kosher salt", new BigDecimal(0.52), unitTeaspoon, guacamoleRecepie));
-        guacamoleRecepie.getIngredients().add(new Ingredient("eggs", new BigDecimal(4), unitRipe, guacamoleRecepie));
-        guacamoleRecepie.getIngredients().add(new Ingredient("sugar", new BigDecimal(2), unitTablespoon, guacamoleRecepie));
-        guacamoleRecepie.getIngredients().add(new Ingredient("coconut milk", new BigDecimal(0.44), unitDash, guacamoleRecepie));
+        guacamoleRecepie.getIngredients().add(new Ingredient("avocados", new BigDecimal(2), unitRipe));
+        guacamoleRecepie.getIngredients().add(new Ingredient("Kosher salt", new BigDecimal(0.52), unitTeaspoon));
+        guacamoleRecepie.getIngredients().add(new Ingredient("eggs", new BigDecimal(4), unitRipe));
+        guacamoleRecepie.getIngredients().add(new Ingredient("sugar", new BigDecimal(2), unitTablespoon));
+        guacamoleRecepie.getIngredients().add(new Ingredient("coconut milk", new BigDecimal(0.44), unitDash));
         //add notes
 //        Notes guacamoleNotes=new Notes("best served with potatos");
 //        guacamoleRecepie.setNotes(guacamoleNotes);
@@ -99,9 +99,9 @@ public class RecepieBootstrap implements ApplicationListener<ContextRefreshedEve
         //set categories
         dumplingsRecepie.getCategories().add(americanCategory);
         // set ingredients
-        dumplingsRecepie.getIngredients().add(new Ingredient("meat", new BigDecimal(2), unitRipe, dumplingsRecepie));
-        dumplingsRecepie.getIngredients().add(new Ingredient("Kosher salt", new BigDecimal(0.2), unitTeaspoon, dumplingsRecepie));
-        dumplingsRecepie.getIngredients().add(new Ingredient("sugar", new BigDecimal(1), unitTablespoon, dumplingsRecepie));
+        dumplingsRecepie.getIngredients().add(new Ingredient("meat", new BigDecimal(2), unitRipe));
+        dumplingsRecepie.getIngredients().add(new Ingredient("Kosher salt", new BigDecimal(0.2), unitTeaspoon));
+        dumplingsRecepie.getIngredients().add(new Ingredient("sugar", new BigDecimal(1), unitTablespoon));
         // set notes
 //        Notes dumplingNotes= new Notes("dont use old green meat");
 //        dumplingsRecepie.setNotes(dumplingNotes);
